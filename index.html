@@ -1,1 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garoa · artigos de chuva</title>
+  <!-- Bootstrap 5 + ícones -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (biblioteca oficial) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts (opcional, para um toque suave) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background-color: #f4f9ff; /* céu suave */
+    }
+    .navbar-brand {
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .brand-garoa {
+      color: #0b3b5c; /* azul profundo */
+    }
+    .bg-chuva {
+      background: linear-gradient(145deg, #d9e9fa 0%, #b0d0ee 100%);
+    }
+    .icone-circulo {
+      background-color: #1b5a7a;
+      color: white;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      transition: 0.2s;
+    }
+    .icone-circulo:hover {
+      background-color: #ffc107;
+      color: #0b3b5c;
+    }
+    .card-produto {
+      border: none;
+      border-radius: 30px 10px 30px 10px;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 15px 25px -10px rgba(0,40,80,0.2);
+      transition: all 0.25s;
+    }
+    .card-produto:hover {
+      transform: translateY(-8px);
+      background: white;
+      box-shadow: 0 25px 30px -8px #1f3a4b;
+    }
+    .btn-guarda {
+      background-color: #2c5f7e;
+      color: white;
+      border-radius: 40px;
+      padding: 8px 25px;
+      font-weight: 600;
+      border: 2px solid #ffcd7e;
+    }
+    .btn-guarda:hover {
+      background-color: #ffc107;
+      color: #0a3142;
+      border-color: #0a3142;
+    }
+    footer {
+      background-color: #0a3142;
+      color: #e0f0ff;
+    }
+    .footer-info i {
+      color: #ffc107;
+      margin-right: 8px;
+    }
+    .destaque-frase {
+      font-size: 1.2rem;
+      font-weight: 400;
+      background: rgba(255,255,240,0.6);
+      padding: 10px 20px;
+      border-radius: 50px;
+      border-left: 6px solid #ffc107;
+    }
+    .cnpj-badge {
+      background: #1e4a66;
+      color: white;
+      padding: 3px 10px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
 
+  <!-- NAVBAR (ícones e identidade) -->
+  <nav class="navbar navbar-expand-lg bg-chuva py-3 shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="#">
+        <i class="bi bi-cloud-drizzle fs-1 me-2" style="color: #1b5a7a;"></i>
+        <span class="brand-garoa">GAROA</span> <span style="font-weight:300;">artigos de chuva</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#"><i class="bi bi-house-door"></i> Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#produtos"><i class="bi bi-umbrella"></i> Guarda-chuvas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre"><i class="bi bi-info-circle"></i> Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato"><i class="bi bi-geo-alt"></i> Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO / frase de impacto e ícone de guarda-chuva -->
+  <section class="container my-5">
+    <div class="row align-items-center g-4">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <i class="bi bi-umbrella-fill display-1" style="color: #1d6185;"></i>
+          <span class="cnpj-badge"><i class="bi bi-building"></i> 18500999000101</span>
+        </div>
+        <h1 class="display-4 fw-bold" style="color: #0b3b5c;">proteção com <span style="color:#c55a1a;">estilo</span></h1>
+        <p class="lead">Na Garoa você encontra guarda-chuvas resistentes, elegantes e com a cara de São Paulo. </p>
+        <div class="destaque-frase my-4">
+          <i class="bi bi-droplet-half me-2" style="color:#0e5380;"></i> 
+          “mesmo com garoa, seu look brilha” 
+          <i class="bi bi-droplet-half ms-2" style="color:#0e5380;"></i>
+        </div>
+        <a href="#produtos" class="btn btn-guarda btn-lg mt-2"><i class="bi bi-arrow-down-circle"></i> conheça modelos</a>
+      </div>
+      <div class="col-md-6 text-center">
+        <!-- ilustração/emoji de guarda-chuva grande -->
+        <i class="bi bi-umbrella" style="font-size: 12rem; color: #235e83; opacity: 0.8;"></i>
+        <p class="text-secondary"><i class="bi bi-cloud-rain"></i> desde 2020 enfrentando os temporais com você</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS COM ÍCONES (cards) -->
+  <section class="container my-5 pt-3">
+    <h2 class="text-center mb-5 fw-semibold" style="color: #0b3b5c;">por que escolher a Garoa?</h2>
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="icone-circulo mx-auto">
+          <i class="bi bi-shield-shaded"></i>
+        </div>
+        <h5>resistência comprovada</h5>
+        <p>Estrutura reforçada para ventos fortes. Testado na cidade de São Paulo.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="icone-circulo mx-auto">
+          <i class="bi bi-palette"></i>
+        </div>
+        <h5>design exclusivo</h5>
+        <p>Cores e estampas autorais. Do básico ao sofisticado.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="icone-circulo mx-auto">
+          <i class="bi bi-truck"></i>
+        </div>
+        <h5>envio rápido</h5>
+        <p>Entregamos para todo o Brasil com embalagem especial.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS (guarda-chuvas) -->
+  <section id="produtos" class="container my-5">
+    <h2 class="text-center fw-semibold mb-2" style="color: #0b3b5c;"><i class="bi bi-umbrella"></i> nossos guarda-chuvas</h2>
+    <p class="text-center text-secondary mb-5">clássicos, dobráveis, coloridos e transparentes</p>
+    <div class="row g-4">
+      <!-- produto 1 -->
+      <div class="col-md-4">
+        <div class="card card-produto p-3 text-center">
+          <i class="bi bi-umbrella-fill display-1" style="color: #163A4F;"></i>
+          <div class="card-body">
+            <h5 class="card-title">GUARDA-CHUVA EXECUTIVO</h5>
+            <p class="card-text">Preto fosco, cabo de madeira. 16 varetas.</p>
+            <p class="fw-bold text-primary-emphasis">R$ 89,90</p>
+            <a href="#" class="btn btn-guarda btn-sm"><i class="bi bi-cart-plus"></i> adicionar</a>
+          </div>
+        </div>
+      </div>
+      <!-- produto 2 -->
+      <div class="col-md-4">
+        <div class="card card-produto p-3 text-center">
+          <i class="bi bi-umbrella display-1" style="color: #5f9ea0;"></i>
+          <div class="card-body">
+            <h5 class="card-title">COLORIDO DOBRÁVEL</h5>
+            <p class="card-text">Estampa xadrez, leve e compacto.</p>
+            <p class="fw-bold text-primary-emphasis">R$ 59,90</p>
+            <a href="#" class="btn btn-guarda btn-sm"><i class="bi bi-cart-plus"></i> adicionar</a>
+          </div>
+        </div>
+      </div>
+      <!-- produto 3 -->
+      <div class="col-md-4">
+        <div class="card card-produto p-3 text-center">
+          <i class="bi bi-droplet display-1" style="color: #2b6c8f;"></i>
+          <div class="card-body">
+            <h5 class="card-title">TRANSPARENTE BOLHA</h5>
+            <p class="card-text">Totalmente transparente, aro de metal.</p>
+            <p class="fw-bold text-primary-emphasis">R$ 69,90</p>
+            <a href="#" class="btn btn-guarda btn-sm"><i class="bi bi-cart-plus"></i> adicionar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE A EMPRESA (com dados cadastrais) -->
+  <section id="sobre" class="container my-5 p-4 rounded-4" style="background-color: #e1effb;">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <h3><i class="bi bi-building"></i> Garoa Artigos de Chuva Importação e Exportação LTDA</h3>
+        <p class="mt-3"><strong>Nome fantasia:</strong> Fpeletro.com</p>
+        <p><i class="bi bi-calendar-check me-1"></i><strong> Situação cadastral:</strong> 19/03/2020 (ativa)</p>
+        <p><i class="bi bi-credit-card"></i> <strong>CNPJ:</strong> 18.500.999/0001-01 · 18500999000101</p>
+        <p><i class="bi bi-geo-alt-fill"></i> <strong>Endereço:</strong> Rua Dr Carlos Augusto de Campos, 288 – Santo Amaro, São Paulo/SP – 04750-060</p>
+        <p><i class="bi bi-telephone-fill"></i> <strong>(11) 5686-2991</strong> (whatsapp e ligações)</p>
+        <p class="mt-3"><span class="badge bg-warning text-dark p-2"><i class="bi bi-exclamation-triangle"></i> desde 2020 secando e molhando corações</span></p>
+      </div>
+      <div class="col-lg-5 text-center">
+        <i class="bi bi-cloud-rain-heavy-fill display-1" style="color: #11364b;"></i>
+        <p class="destaque-frase mt-3">“especialistas em dias nublados”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRASE INSPIRACIONAL + INFO DE CONTATO -->
+  <section class="container my-5">
+    <div class="p-5 text-white rounded-4" style="background: linear-gradient(135deg, #1a4c6e 0%, #0f3347 100%);">
+      <div class="row">
+        <div class="col-md-8">
+          <h3><i class="bi bi-chat-quote"></i> até a maior tempestade passa, mas o estilo fica</h3>
+          <p class="mt-3 fs-5">Venha conhecer nossa loja no coração de Santo Amaro. Se chover, oferecemos café e um guarda-chuva para voltar para casa.</p>
+          <div class="d-flex flex-wrap gap-4 mt-4">
+            <span><i class="bi bi-whatsapp"></i> (11) 5686-2991</span>
+            <span><i class="bi bi-envelope"></i> contato@fpeletro.com</span>
+            <span><i class="bi bi-clock"></i> Seg–Sex 9h–18h</span>
+          </div>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <i class="bi bi-droplet display-1 opacity-50"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO RÁPIDA (ícone) -->
+  <section id="contato" class="container text-center my-5">
+    <h4><i class="bi bi-pin-map-fill" style="color:#ad4b1a;"></i> Onde estamos</h4>
+    <p>Rua Dr Carlos Augusto de Campos, 288 - Santo Amaro, São Paulo - SP, 04750-060</p>
+    <div class="d-flex justify-content-center gap-5 flex-wrap">
+      <span><i class="bi bi-building"></i> Fpeletro.com</span>
+      <span><i class="bi bi-telephone"></i> (11) 5686-2991</span>
+      <span><i class="bi bi-calendar-check"></i> desde 19/03/2020</span>
+    </div>
+    <!-- botão com ícone de local -->
+    <a href="#" class="btn btn-outline-secondary mt-4 rounded-pill"><i class="bi bi-map"></i> traçar rota no mapa</a>
+  </section>
+
+  <!-- RODAPÉ (com repetição das informações essenciais) -->
+  <footer class="py-4 mt-5">
+    <div class="container">
+      <div class="row footer-info">
+        <div class="col-md-4">
+          <p><i class="bi bi-umbrella"></i> Garoa artigos de chuva</p>
+          <p><i class="bi bi-c-circle"></i> 2020–2025 | todos os dias de garoa</p>
+        </div>
+        <div class="col-md-4">
+          <p><i class="bi bi-geo-alt"></i> R. Dr Carlos Augusto de Campos, 288</p>
+          <p><i class="bi bi-geo"></i> Santo Amaro, São Paulo/SP</p>
+        </div>
+        <div class="col-md-4">
+          <p><i class="bi bi-telephone"></i> (11) 5686-2991</p>
+          <p><i class="bi bi-file-text"></i> CNPJ 18.500.999/0001-01</p>
+        </div>
+      </div>
+      <div class="text-center mt-3 small opacity-75">
+        <i class="bi bi-droplet"></i> “em dias de chuva, a gente se encontra” <i class="bi bi-droplet"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (para navbar toggle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
